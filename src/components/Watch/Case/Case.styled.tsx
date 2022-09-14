@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import { COLORS } from '../../../consts/COLORS'; 
 
 export const CaseStyled = styled.div`
     position: absolute;
@@ -13,7 +14,7 @@ export const LeftSideOfCase = styled.div`
     width: 20%;
     height: 100%;
     border-radius: 50% 0 0 50%;
-    background-color: gray;
+    background-color: ${COLORS.CASE_COLOR};
 `;
 
 export const RightSideOfCase = styled(LeftSideOfCase)`
@@ -25,7 +26,7 @@ export const MiddlePartOfCase = styled.div`
     width: 240px;
     height: 240px;
     border-radius: 50%;
-    background-color: gray;
+    background-color: ${COLORS.CASE_COLOR};
 `;
 
 export const PlaceForCrown = styled.div`
@@ -41,7 +42,7 @@ export const PlaceForCrown = styled.div`
 export const PartStyled = styled.div`
     width: 100%;
     height: 27%;
-    background-color: grey;
+    background-color: ${COLORS.CASE_COLOR};
     border-radius: 0 50% 10% 0;
 `;
 
