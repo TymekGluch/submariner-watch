@@ -1,5 +1,5 @@
-import React from "react";
-import { CaseStyled, LeftSideOfCase, RightSideOfCase, PlaceForCrown, PartStyled, SecondPartStyled, MiddlePartOfCase } from "./Case.styled";
+import React from 'react';
+import { CaseStyled, LeftSideOfCase, RightSideOfCase, PlaceForCrown, PartStyled, SecondPartStyled, MiddlePartOfCase } from './Case.styled';
 
 export const Case = () => (
     <CaseStyled>
@@ -11,4 +11,4 @@ export const Case = () => (
             <SecondPartStyled />
         </PlaceForCrown>
     </CaseStyled>
-);
+); 
