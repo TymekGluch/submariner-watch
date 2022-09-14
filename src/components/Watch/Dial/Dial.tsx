@@ -1,6 +1,4 @@
 import React from 'react';
 import { DialStyled } from './Dial.styled';
 
-export const Dial = () => (
-    <DialStyled></DialStyled>
-); 
+export const Dial = () => <DialStyled></DialStyled>;

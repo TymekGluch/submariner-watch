@@ -4,11 +4,11 @@ import { CountdownTimerStyled, InsideBorderStyled } from './CountdownTimer.style
 import { PointWrapper } from './PointsWrapper/PointsWrapper';
 import { POINTS } from './PointsWrapper/PointsWrapper.data';
 
-
 export const CountdownTimer = () => (
-    <CountdownTimerStyled>
-        <InsideBorderStyled />
-        {POINTS.map((props) => <PointWrapper key={uuid()} {...props} />)}
-    </CountdownTimerStyled>
+  <CountdownTimerStyled>
+    <InsideBorderStyled />
+    {POINTS.map((props) => (
+      <PointWrapper key={uuid()} {...props} />
+    ))}
+  </CountdownTimerStyled>
 );
- 

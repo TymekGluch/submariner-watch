@@ -4,13 +4,12 @@ import { Case } from './Case/Case';
 import { Dial } from './Dial/Dial';
 import { RotatingBezel } from './RotatingBezel/RotatingBezel';
 
-
 export const Watch = () => (
-    <WatchStyled>
-        <Case />
-        
-        <Dial />
+  <WatchStyled>
+    <Case />
 
-        <RotatingBezel />
-    </WatchStyled>
-);  
+    <Dial />
+
+    <RotatingBezel />
+  </WatchStyled>
+);
