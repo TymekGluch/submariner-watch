@@ -11,4 +11,7 @@ export const DialStyled = styled.div`
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 `;
