@@ -3,4 +3,5 @@ export const COLORS = {
   ITEM_COLOR: '#fbe5e0',
   CASE_COLOR: '#c0c0c0',
   DIAL_COLOR: '#273C83',
+  WHITE_COLOR: '#ffffff',
 };
