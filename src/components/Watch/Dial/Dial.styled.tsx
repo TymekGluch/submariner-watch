@@ -15,3 +15,45 @@ export const DialStyled = styled.div`
   align-items: flex-start;
   justify-content: center;
 `;
+
+export const HeaderStyled = styled.header`
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+`;
+
+export const SVGStyled = styled.svg`
+  margin-top: 36px;
+  width: 60px;
+  height: 30px;
+`;
+
+export const PathStyled = styled.path`
+  fill: ${COLORS.ITEM_COLOR};
+  transform: translate(-84.79px, -161.01px);
+`;
+
+export const TextStyled = styled.p`
+  font-size: 0.45rem;
+  font-weight: 600;
+  color: ${COLORS.ITEM_COLOR};
+`;
+
+export const SectionStyled = styled(HeaderStyled)`
+  bottom: 2.5rem;
+`;
+
+export const SectionHeadingStyled = styled.h2`
+  color: ${COLORS.ITEM_COLOR};
+  font-size: 6px;
+  font-weight: 900;
+`;
+export const SectionTextStyled = styled.p`
+  color: ${COLORS.ITEM_COLOR};
+  font-size: 5px;
+  font-weight: 900;
+`;
