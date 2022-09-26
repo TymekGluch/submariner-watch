@@ -3,6 +3,7 @@ export const COLORS = {
   ITEM_COLOR: '#fbe5e0',
   DARK_ITEM_COLOR: '#000000',
   CASE_COLOR: '#c0c0c0',
+  HANDS_COLOR: '#868686',
   DIAL_COLOR: '#273C83',
   WHITE_COLOR: '#ffffff',
 };
