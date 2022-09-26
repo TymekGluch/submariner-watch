@@ -24,11 +24,60 @@ export const Hands = styled.div`
 
 export const HourStyled = styled(Hands)``;
 
-export const MinuteStyled = styled(Hands)``;
+export const MinuteStyled = styled(Hands)`
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 0.5rem;
+  height: 62px;
+  background-color: ${COLORS.ITEM_COLOR};
+  border: solid 2px ${COLORS.HANDS_COLOR};
+  transform: translate(-50%, -8px) rotate(0deg);
+
+  &::before {
+    content: '';
+    border-top: 10px solid ${COLORS.HANDS_COLOR};
+    border-left: 0.25rem solid transparent;
+    border-right: 0.25rem solid transparent;
+    display: flex;
+    background: transparent;
+    width: 0;
+    height: 0;
+    transform: translateY(-120%) rotate(180deg);
+  }
+
+  &::after {
+    content: '';
+    border-top: 10px solid ${COLORS.HANDS_COLOR};
+    border-left: 0.25rem solid transparent;
+    border-right: 0.25rem solid transparent;
+    display: flex;
+    background: transparent;
+    width: 0;
+    height: 0;
+    justify-self: flex-end;
+    transform: translateY(480%);
+  }
+`;
 
 export const SecondStyled = styled(Hands)`
   width: 1.5px;
   height: 80px;
   background-color: ${COLORS.HANDS_COLOR};
-  transform: translate(-50%) rotate(10deg);
+  transform: translate(-50%) rotate(70deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: '';
+    min-width: 0.7rem;
+    max-width: 0.7rem;
+    height: 0.7rem;
+    background-color: ${COLORS.ITEM_COLOR};
+    border: solid 2px ${COLORS.HANDS_COLOR};
+    border-radius: 50%;
+    display: flex;
+  }
 `;
