@@ -1,11 +1,39 @@
 import React from 'react';
-import { CircleStyled, HourStyled, MinuteStyled, SecondStyled } from './Hands.styled';
+import {
+  CircleOfHourStyled,
+  CircleStyled,
+  ElementStyled,
+  HourStyled,
+  InsideItemStyled,
+  InsideTringleStyled,
+  MinuteStyled,
+  ReactangleOfHourStyled,
+  SecondStyled,
+  TriangleOfHourStyled,
+  secondaryInsideItemStyled,
+  thirdInsideItemStyled,
+} from './Hands.styled';
 
 export const Hands = () => (
   <>
     <CircleStyled />
-    <HourStyled />
-    <MinuteStyled />
+
+    <HourStyled>
+      <TriangleOfHourStyled>
+        <InsideTringleStyled />
+      </TriangleOfHourStyled>
+
+      <CircleOfHourStyled>
+        <InsideItemStyled />
+      </CircleOfHourStyled>
+
+      <ReactangleOfHourStyled />
+    </HourStyled>
+
+    <MinuteStyled>
+      <ElementStyled />
+    </MinuteStyled>
+
     <SecondStyled />
   </>
 );
