@@ -6,11 +6,11 @@ export const CircleStyled = styled.div`
   left: 50%;
   bottom: 50%;
   transform: translate(-50%, 50%);
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.7rem;
+  height: 0.7rem;
   border-radius: 50%;
   background-color: ${COLORS.HANDS_COLOR};
-  z-index: 3;
+  z-index: 4;
 `;
 
 export const Hands = styled.div`
@@ -29,6 +29,7 @@ export const HourStyled = styled(Hands)`
   justify-content: center;
   width: fit-content;
   height: fit-content;
+  transform: translate(-50%) rotate(0deg);
 `;
 
 export const TriangleOfHourStyled = styled.div`
@@ -57,34 +58,38 @@ export const InsideTringleStyled = styled.div`
 
 export const CircleOfHourStyled = styled.div`
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: flex-start;
-  width: 1rem;
-  height: 1rem;
+  width: 1.3rem;
+  height: 1.3rem;
   background-color: ${COLORS.ITEM_COLOR};
   border-radius: 50%;
   border: solid 2px ${COLORS.HANDS_COLOR};
   transform: translate(0, 1px);
 `;
 
-export const InsideItemStyled = styled.div`
-  height: 0.5rem;
-  width: 1.5px;
+export const CircleInsideElementStyled = styled.div`
+  ${Array.from(
+    { length: 3 },
+    (_, index) => `
+  &:nth-child(${index + 1}) {
+    transform: translate(-50%, 60%) rotate(${index * 120 + 60}deg);
+  }
+  `,
+  ).join('')}
+  width: 2px;
+  height: 0.624rem;
   background-color: ${COLORS.HANDS_COLOR};
-  transform-origin: bottom;
-`;
-
-export const secondaryInsideItemStyled = styled(InsideItemStyled)`
-  transform: rotate(120deg);
-`;
-
-export const thirdInsideItemStyled = styled(InsideItemStyled)`
-  transform: rotate(240deg);
+  transform-origin: center bottom;
+  position: absolute;
+  left: 50%;
+  top: -50%;
 `;
 
 export const ReactangleOfHourStyled = styled.div`
   width: 0.4rem;
-  height: 1.75rem;
+  height: 1.45rem;
   border: solid 2px ${COLORS.HANDS_COLOR};
   background-color: ${COLORS.ITEM_COLOR};
 `;

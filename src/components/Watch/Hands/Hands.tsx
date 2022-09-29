@@ -1,30 +1,30 @@
 import React from 'react';
 import {
+  CircleInsideElementStyled,
   CircleOfHourStyled,
   CircleStyled,
   ElementStyled,
   HourStyled,
-  InsideItemStyled,
   InsideTringleStyled,
   MinuteStyled,
   ReactangleOfHourStyled,
   SecondStyled,
   TriangleOfHourStyled,
-  secondaryInsideItemStyled,
-  thirdInsideItemStyled,
 } from './Hands.styled';
+
+import { v4 as uuid } from 'uuid';
 
 export const Hands = () => (
   <>
-    <CircleStyled />
-
     <HourStyled>
       <TriangleOfHourStyled>
         <InsideTringleStyled />
       </TriangleOfHourStyled>
 
       <CircleOfHourStyled>
-        <InsideItemStyled />
+        {Array.from({ length: 3 }).map(() => (
+          <CircleInsideElementStyled key={uuid()} />
+        ))}
       </CircleOfHourStyled>
 
       <ReactangleOfHourStyled />
@@ -35,5 +35,7 @@ export const Hands = () => (
     </MinuteStyled>
 
     <SecondStyled />
+
+    <CircleStyled />
   </>
 );

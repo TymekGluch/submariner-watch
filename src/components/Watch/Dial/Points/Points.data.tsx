@@ -4,7 +4,7 @@ const PROPERTIES = {
   SMALL: {
     width: '1px',
     height: '4px',
-    backgroundColor: `${COLORS.WHITE_COLOR}`,
+    backgroundColor: `${COLORS.ITEM_COLOR}`,
     marginTop: '0',
     border: 'none',
     borderRadius: '0',
@@ -15,7 +15,7 @@ const PROPERTIES = {
   BIG: {
     width: '10px',
     height: '28px',
-    backgroundColor: `${COLORS.WHITE_COLOR}`,
+    backgroundColor: `${COLORS.ITEM_COLOR}`,
     marginTop: '5px',
     border: `solid 2px ${COLORS.CASE_COLOR}`,
     borderRadius: '0',
@@ -26,7 +26,7 @@ const PROPERTIES = {
   CIRCLE: {
     width: '18px',
     height: '18px',
-    backgroundColor: `${COLORS.WHITE_COLOR}`,
+    backgroundColor: `${COLORS.ITEM_COLOR}`,
     marginTop: '5px',
     border: `solid 2px ${COLORS.CASE_COLOR}`,
     borderRadius: '50%',
@@ -43,7 +43,7 @@ const PROPERTIES = {
     border: '',
     borderLeft: '10px solid transparent',
     borderRight: '10px solid transparent',
-    borderTop: `28px solid ${COLORS.WHITE_COLOR}`,
+    borderTop: `28px solid ${COLORS.ITEM_COLOR}`,
   },
   NULL: {
     width: '0',
