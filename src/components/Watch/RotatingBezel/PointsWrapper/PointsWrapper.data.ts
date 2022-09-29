@@ -8,7 +8,7 @@ const PROPERTIES = {
     height: '0',
     borderLeft: '15px solid transparent',
     borderRight: '15px solid transparent',
-    borderTop: `15px solid ${COLORS.CASE_COLOR}`,
+    borderTop: `15px solid ${COLORS.ITEM_COLOR}`,
     content: null,
   },
   NUMERAL: {
@@ -22,7 +22,7 @@ const PROPERTIES = {
     content: '10',
   },
   SMALL: {
-    backgroundColor: `${COLORS.CASE_COLOR}`,
+    backgroundColor: `${COLORS.ITEM_COLOR}`,
     marginTop: '16px',
     width: '2px',
     height: '6px',
@@ -32,7 +32,7 @@ const PROPERTIES = {
     content: null,
   },
   BIG: {
-    backgroundColor: `${COLORS.CASE_COLOR}`,
+    backgroundColor: `${COLORS.ITEM_COLOR}`,
     marginTop: '6px',
     width: '6px',
     height: '18px',

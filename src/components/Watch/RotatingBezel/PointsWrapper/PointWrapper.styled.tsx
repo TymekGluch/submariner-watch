@@ -40,7 +40,7 @@ export const PointStyled = styled.div<Omit<PointProps, 'rotation'>>`
         margin-top: -0.2rem;
         content: '${props.content}';
         font-size: 25px;
-        color: ${COLORS.CASE_COLOR};
+        color: ${COLORS.ITEM_COLOR};
         font-weight: 200;
         font-family: 'Six Caps', sans-serif;
       }
