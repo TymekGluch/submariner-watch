@@ -22,14 +22,14 @@ export const Hands = styled.div`
   z-index: 4;
 `;
 
-export const HourStyled = styled(Hands)`
+export const HourStyled = styled(Hands)<{ rotation: number }>`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: fit-content;
   height: fit-content;
-  transform: translate(-50%) rotate(0deg);
+  transform: translate(-50%) rotate(${(props) => props.rotation});
 `;
 
 export const TriangleOfHourStyled = styled.div`
@@ -94,14 +94,14 @@ export const ReactangleOfHourStyled = styled.div`
   background-color: ${COLORS.ITEM_COLOR};
 `;
 
-export const MinuteStyled = styled(Hands)`
+export const MinuteStyled = styled(Hands)<{ rotation: number }>`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: fit-content;
   height: 80px;
-  transform: translate(-50%) rotate(222deg);
+  transform: translate(-50%) rotate(${(props) => props.rotation}deg);
 `;
 
 export const ElementStyled = styled.div`
@@ -140,11 +140,11 @@ export const ElementStyled = styled.div`
   }
 `;
 
-export const SecondStyled = styled(Hands)`
+export const SecondStyled = styled(Hands)<{ rotation: number }>`
   width: 1.5px;
   height: 80px;
   background-color: ${COLORS.HANDS_COLOR};
-  transform: translate(-50%) rotate(20deg);
+  transform: translate(-50%) rotate(${(props) => props.rotation});
   display: flex;
   align-items: center;
   justify-content: center;
