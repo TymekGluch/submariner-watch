@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useContext, useMemo } from 'react';
 import {
   CircleInsideElementStyled,
   CircleOfHourStyled,
@@ -15,30 +15,20 @@ import {
 import { v4 as uuid } from 'uuid';
 import { getRotationFromDate, HANDS_TYPE } from '../../../utilities/getRotationFromDate';
 import { getCurrentDate } from '../../../utilities/getCurrentDate';
+import { WatchContext } from '../../../contexts/WatchContext';
 
 export const Hands: FC = () => {
-  const [hourHandsRotation, setHourHandsRotation] = useState<number>(0);
-  const [minuteHandsRotation, setMinuteHandsRotation] = useState<number>(0);
-  const [secondHandsRotation, setSecondHandsRotation] = useState<number>(0);
+  const [store] = useContext(WatchContext);
 
-  useEffect(() => {
-    window.onbeforeunload = function () {
-      const x = new Date();
-
-      setSecondHandsRotation(getRotationFromDate(getCurrentDate(x), HANDS_TYPE.SECOND));
-      setMinuteHandsRotation(getRotationFromDate(getCurrentDate(x), HANDS_TYPE.MINUTE));
-      setHourHandsRotation(getRotationFromDate(getCurrentDate(x), HANDS_TYPE.HOUR));
-      return true;
-    };
-
-    return () => {
-      window.onbeforeunload = null;
-    };
-  }, []);
+  const rotations = useMemo(() => ({
+    secondHands: getRotationFromDate(getCurrentDate(store.date), HANDS_TYPE.SECOND), 
+    minuteHands: getRotationFromDate(getCurrentDate(store.date), HANDS_TYPE.MINUTE), 
+    hourHands: getRotationFromDate(getCurrentDate(store.date), HANDS_TYPE.HOUR), 
+  }), [store.date])
 
   return (
     <>
-      <HourStyled rotation={hourHandsRotation}>
+      <HourStyled rotation={rotations.hourHands}>
         <TriangleOfHourStyled>
           <InsideTringleStyled />
         </TriangleOfHourStyled>
@@ -52,11 +42,11 @@ export const Hands: FC = () => {
         <ReactangleOfHourStyled />
       </HourStyled>
 
-      <MinuteStyled rotation={minuteHandsRotation}>
+      <MinuteStyled rotation={rotations.minuteHands}>
         <ElementStyled />
       </MinuteStyled>
 
-      <SecondStyled rotation={secondHandsRotation} />
+      <SecondStyled rotation={rotations.secondHands} />
 
       <CircleStyled />
     </>

@@ -1,21 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useMemo } from 'react';
+import { WatchContext } from '../../../contexts/WatchContext';
 import { AperturaStyled, Number, WindowStylded } from './Aperture.styled';
 
 export const Aperture = () => {
-  const [aperatureState, setAperatureState] = useState(3);
+  const [store] = useContext(WatchContext);
 
-  useEffect(() => {
-    const date = new Date();
-
-    setInterval(() => {
-      setAperatureState(date.getDate());
-    }, 1000);
-  }, []);
+  const resolvedDay = useMemo(() => store.date.getDate(), [store.date])
 
   return (
     <WindowStylded>
       <AperturaStyled>
-        <Number>{aperatureState}</Number>
+        <Number>{resolvedDay}</Number>
       </AperturaStyled>
     </WindowStylded>
   );

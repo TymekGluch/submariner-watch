@@ -29,7 +29,7 @@ export const HourStyled = styled(Hands)<{ rotation: number }>`
   justify-content: center;
   width: fit-content;
   height: fit-content;
-  transform: translate(-50%) rotate(${(props) => props.rotation});
+  transform: translate(-50%) rotate(${(props) => props.rotation}deg);
 `;
 
 export const TriangleOfHourStyled = styled.div`
@@ -144,7 +144,7 @@ export const SecondStyled = styled(Hands)<{ rotation: number }>`
   width: 1.5px;
   height: 80px;
   background-color: ${COLORS.HANDS_COLOR};
-  transform: translate(-50%) rotate(${(props) => props.rotation});
+  transform: translate(-50%) rotate(${(props) => props.rotation}deg);
   display: flex;
   align-items: center;
   justify-content: center;
