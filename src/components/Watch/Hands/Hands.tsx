@@ -20,11 +20,14 @@ import { WatchContext } from '../../../contexts/WatchContext';
 export const Hands: FC = () => {
   const [store] = useContext(WatchContext);
 
-  const rotations = useMemo(() => ({
-    secondHands: getRotationFromDate(getCurrentDate(store.date), HANDS_TYPE.SECOND), 
-    minuteHands: getRotationFromDate(getCurrentDate(store.date), HANDS_TYPE.MINUTE), 
-    hourHands: getRotationFromDate(getCurrentDate(store.date), HANDS_TYPE.HOUR), 
-  }), [store.date])
+  const rotations = useMemo(
+    () => ({
+      secondHands: getRotationFromDate(getCurrentDate(store.date), HANDS_TYPE.SECOND),
+      minuteHands: getRotationFromDate(getCurrentDate(store.date), HANDS_TYPE.MINUTE),
+      hourHands: getRotationFromDate(getCurrentDate(store.date), HANDS_TYPE.HOUR),
+    }),
+    [store.date],
+  );
 
   return (
     <>

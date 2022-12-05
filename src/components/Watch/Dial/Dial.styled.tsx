@@ -57,3 +57,15 @@ export const SectionTextStyled = styled.p`
   font-size: 5px;
   font-weight: 900;
 `;
+
+export const TriangleBottomStyled = styled.div`
+  position: absolute;
+  margin-top: 5px;
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-top: solid 28px ${COLORS.CASE_COLOR};
+  border-left: solid 11px transparent;
+  border-right: solid 11px transparent;
+  z-index: -1;
+`;

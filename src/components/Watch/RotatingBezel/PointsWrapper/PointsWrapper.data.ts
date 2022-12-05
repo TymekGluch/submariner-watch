@@ -51,6 +51,7 @@ const INDEXES: { -readonly [Property in keyof typeof PROPERTIES]: number[] } = {
 };
 
 const getElementKey = (index: number): keyof typeof PROPERTIES =>
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   (Object.entries(INDEXES).find(([_, values]) => values.includes(index)) ?? [
     'TRIANGLE' as keyof typeof PROPERTIES,
   ])[0] as keyof typeof PROPERTIES;

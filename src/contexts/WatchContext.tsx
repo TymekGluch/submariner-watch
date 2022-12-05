@@ -4,8 +4,7 @@ type StateType = {
   date: Date;
 };
 
-type ActionType =
-  | { type: 'setDate'; payload: { date: Date } };
+type ActionType = { type: 'setDate'; payload: { date: Date } };
 
 type Reducer = (state: StateType, action: ActionType) => StateType;
 
@@ -26,11 +25,13 @@ const reducer: Reducer = (state, action) => {
 };
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
-export const WatchContext = createContext<[StateType, Dispatch<ActionType>]>([initiialState, (() => {}) as Dispatch<ActionType>]);
+export const WatchContext = createContext<[StateType, Dispatch<ActionType>]>([
+  initiialState,
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  (() => {}) as Dispatch<ActionType>,
+]);
 
-export const WatchContextProvider = ({
-  children,
-}: { children: ReactNode }) => {
+export const WatchContextProvider = ({ children }: { children: ReactNode }) => {
   const store = useReducer(reducer, initiialState);
 
   const intervalRef = useRef<NodeJS.Timer | null>(null);
@@ -41,10 +42,10 @@ export const WatchContextProvider = ({
         store[1]({
           type: 'setDate',
           payload: { date: new Date() },
-        })
-      }, 1000)
+        });
+      }, 1000);
     }
-  }, [])
+  }, []);
 
   return <WatchContext.Provider value={store}>{children}</WatchContext.Provider>;
 };

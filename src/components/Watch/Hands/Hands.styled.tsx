@@ -18,7 +18,7 @@ export const Hands = styled.div`
   left: 50%;
   bottom: 50%;
   transform: translate(-50%);
-  transform-origin: bottom;
+  transform-origin: center bottom;
   z-index: 4;
 `;
 
@@ -74,7 +74,7 @@ export const CircleInsideElementStyled = styled.div`
     { length: 3 },
     (_, index) => `
   &:nth-child(${index + 1}) {
-    transform: translate(-50%, 60%) rotate(${index * 120 + 60}deg);
+    transform: translate(-50%, 70%) rotate(${index * 120 + 60}deg);
   }
   `,
   ).join('')}

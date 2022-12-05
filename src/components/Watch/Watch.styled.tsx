@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const WatchStyled = styled.div`
   position: relative;
-  transform: translate(-50%, -70%) scale(2);
+  transform: translate(-50%, -70%) scale(3);
   left: 50%;
   top: 50%;
   display: flex;
