@@ -4,7 +4,7 @@ const PROPERTIES = {
   SMALL: {
     width: '1px',
     height: '4px',
-    backgroundColor: `${COLORS.ITEM_COLOR}`,
+    backgroundColor: `${COLORS.CASE_COLOR}`,
     marginTop: '0',
     border: 'none',
     borderRadius: '0',
@@ -38,12 +38,12 @@ const PROPERTIES = {
     width: '0',
     height: '0',
     backgroundColor: 'transparent',
-    marginTop: '5px',
+    marginTop: '7.4px',
     borderRadius: '0',
     border: '',
-    borderLeft: '10px solid transparent',
-    borderRight: '10px solid transparent',
-    borderTop: `28px solid ${COLORS.ITEM_COLOR}`,
+    borderLeft: '7px solid transparent',
+    borderRight: '7px solid transparent',
+    borderTop: `19.6px solid ${COLORS.ITEM_COLOR}`,
   },
   NULL: {
     width: '0',
@@ -67,6 +67,7 @@ const INDEXES: { -readonly [Property in keyof typeof PROPERTIES]: number[] } = {
 };
 
 const getElementKey = (index: number): keyof typeof PROPERTIES =>
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   (Object.entries(INDEXES).find(([_, values]) => values.includes(index)) ?? [
     'TRIANGLE' as keyof typeof PROPERTIES,
   ])[0] as keyof typeof PROPERTIES;

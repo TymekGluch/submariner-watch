@@ -5,7 +5,7 @@ import { AperturaStyled, Number, WindowStylded } from './Aperture.styled';
 export const Aperture = () => {
   const [store] = useContext(WatchContext);
 
-  const resolvedDay = useMemo(() => store.date.getDate(), [store.date])
+  const resolvedDay = useMemo(() => store.date.getDate(), [store.date]);
 
   return (
     <WindowStylded>

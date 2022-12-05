@@ -1,6 +1,12 @@
 import React, { FC, MouseEvent, useEffect, useRef, useState } from 'react';
 import { v4 as uuid } from 'uuid';
-import { InsideBorderStyled, RotatingBezelStyled } from './RotatingBezel.styled';
+import {
+  BackgroundSemicirclesContainerStyled,
+  BackgroundSemicirclesStyled,
+  InsideBorderStyled,
+  RotatingBezelStyled,
+  SecondBackgroundSemicirclesStyled,
+} from './RotatingBezel.styled';
 import { PointWrapper } from './PointsWrapper/PointsWrapper';
 import { POINTS } from './PointsWrapper/PointsWrapper.data';
 
@@ -54,7 +60,16 @@ export const RotatingBezel: FC = () => {
       onMouseMove={handleMouseMove}
     >
       <InsideBorderStyled />
+      {Array.from({ length: 103 }).map((_, index) => {
+        return (
+          <BackgroundSemicirclesContainerStyled key={uuid()} degrees={index * 3.495}>
+            <BackgroundSemicirclesStyled />
 
+            <SecondBackgroundSemicirclesStyled />
+          </BackgroundSemicirclesContainerStyled>
+        );
+      })}
+      ;
       {POINTS.map((props) => (
         <PointWrapper key={uuid()} {...props} />
       ))}

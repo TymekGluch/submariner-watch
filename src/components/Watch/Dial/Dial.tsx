@@ -8,6 +8,7 @@ import {
   SectionTextStyled,
   SVGStyled,
   TextStyled,
+  TriangleBottomStyled,
 } from './Dial.styled';
 import { Points } from './Points/Points';
 import { POINTS } from './Points/Points.data';
@@ -37,5 +38,7 @@ export const Dial = () => (
       <SectionTextStyled>Superlative Chronometer</SectionTextStyled>
       <SectionTextStyled>Officially Certified</SectionTextStyled>
     </SectionStyled>
+
+    <TriangleBottomStyled />
   </DialStyled>
 );

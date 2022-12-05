@@ -6,9 +6,9 @@ export const CrownWrapperStyled = styled.button`
   z-index: 2;
   top: 50%;
   right: 0;
-  transform: translate(100%, -50%) translateX(50%);
+  transform: translate(100%, -50%) translateX(0);
   border: none;
-  background-color: ${COLORS.BACKGROUND_COLOR};
+  background-color: rgba(255, 255, 255, 0);
   width: 1.7rem;
   height: 2.8rem;
   display: flex;
@@ -27,19 +27,25 @@ export const CrownStyled = styled.div`
   align-items: center;
 `;
 
-export const CrownPointStyled = styled.div` 
-    background-color: transparent;
-    height: 0;
-    width: 100%;
-    border-bottom: 0.24rem solid ${COLORS.CASE_COLOR};
-    border-left: 0.15rem solid transparent;
-    border-right: 0.15rem solid transparent;
-    transform: rotate(180deg);
+export const CrowPointWrapperStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+`;
+
+export const CrownPointStyled = styled.div`
+  background-color: transparent;
+  height: 0;
+  width: 100%;
+  border-bottom: 0.24rem solid ${COLORS.CASE_COLOR};
+  border-left: 0.15rem solid transparent;
+  border-right: 0.15rem solid transparent;
+  transform: rotate(180deg);
 `;
 
 export const ReversedCrownPointStyled = styled(CrownPointStyled)`
-    transform: rotate(0) translateY(-1px);
-
+  transform: rotate(0) translateY(-1px);
 `;
 
 export const OutsideCrownStyled = styled(CrownStyled)`

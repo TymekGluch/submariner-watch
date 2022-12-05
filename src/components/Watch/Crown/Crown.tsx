@@ -1,25 +1,31 @@
-import React from 'react';
+import React, { FC, Fragment } from 'react';
 import {
   CrownPinStyled,
   CrownPointStyled,
   CrownStyled,
   CrownWrapperStyled,
+  CrowPointWrapperStyled,
   OutsideCrownStyled,
   ReversedCrownPointStyled,
 } from './Crown.styled';
 
-export const Crown = () => {
+import { v4 as uuid } from 'uuid';
+
+export const Crown: FC = () => {
   return (
     <>
       <CrownWrapperStyled>
         <CrownStyled>
-            {Array.from({ length: 6 }).map(() => 
-                <>
-                    <CrownPointStyled />
+          <CrowPointWrapperStyled>
+            {Array.from({ length: 6 }).map(() => (
+              <Fragment key={uuid()}>
+                <CrownPointStyled />
 
-                    <ReversedCrownPointStyled />
-                </>
-            )};
+                <ReversedCrownPointStyled />
+              </Fragment>
+            ))}
+            ;
+          </CrowPointWrapperStyled>
         </CrownStyled>
         <OutsideCrownStyled />
       </CrownWrapperStyled>

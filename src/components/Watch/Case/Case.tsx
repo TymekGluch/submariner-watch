@@ -7,16 +7,38 @@ import {
   PartStyled,
   SecondPartStyled,
   MiddlePartOfCase,
+  LeftTopBackground,
+  LeftBottomBackground,
+  RightTopBackground,
+  RightBottomBackground,
+  SecondTriangleBackgroundStyled,
+  TriangleBackgroundStyled,
 } from './Case.styled';
 
 export const Case = () => (
   <CaseStyled>
-    <LeftSideOfCase />
-    <RightSideOfCase />
+    <LeftSideOfCase>
+      <LeftTopBackground />
+
+      <LeftBottomBackground />
+    </LeftSideOfCase>
+
+    <RightSideOfCase>
+      <RightTopBackground />
+
+      <RightBottomBackground />
+    </RightSideOfCase>
+
     <MiddlePartOfCase />
+
     <PlaceForCrown>
-      <PartStyled />
-      <SecondPartStyled />
+      <PartStyled>
+        <TriangleBackgroundStyled />
+      </PartStyled>
+
+      <SecondPartStyled>
+        <SecondTriangleBackgroundStyled />
+      </SecondPartStyled>
     </PlaceForCrown>
   </CaseStyled>
 );
