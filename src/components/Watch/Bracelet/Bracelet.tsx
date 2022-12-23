@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
-import { v4 } from 'uuid';
+import { v4 as uuid } from 'uuid';
 import { BreceletStyled, PartOfBraceletStyled, SideOfBraceletStyled } from './Bracelet.styled';
 
 export const Bracelet: FC = () => (
   <BreceletStyled>
     {Array.from({ length: 2 }, (_, index) => {
       return (
-        <SideOfBraceletStyled key={v4()} rotation={index === 1 ? 180 : 0}>
+        <SideOfBraceletStyled key={uuid()} rotation={index === 1 ? 180 : 0}>
           {Array.from({ length: 9 }, (_, index) => {
             const getHeightOfBraceletParts = (index: number): number => {
               if ([2, 8].includes(index)) return 38;
@@ -17,7 +17,7 @@ export const Bracelet: FC = () => (
 
             return (
               <PartOfBraceletStyled
-                key={v4()}
+                key={uuid()}
                 translation={[3, 4, 5].includes(index) ? -45 : 0}
                 width={[3, 4, 5].includes(index) ? 38 : 31}
                 height={getHeightOfBraceletParts(index)}

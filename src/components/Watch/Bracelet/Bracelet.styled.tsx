@@ -36,7 +36,7 @@ export const PartOfBraceletStyled = styled.div<{
   shadowHeight: number;
 }>`
   width: ${({ width = 0 }) => width}%;
-  height: ${({ height = 33.333 }) => height}%;
+  height: ${({ height = 33.3333 }) => height}%;
   background-color: ${COLORS.CASE_COLOR};
   border-bottom: solid 1px ${COLORS.BACKGROUND_COLOR};
   border-left: solid 0.05px ${COLORS.BACKGROUND_COLOR};
