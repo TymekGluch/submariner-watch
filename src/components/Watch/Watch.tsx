@@ -6,9 +6,12 @@ import { RotatingBezel } from './RotatingBezel/RotatingBezel';
 import { Aperture } from './Aperture/Aperture';
 import { Hands } from './Hands/Hands';
 import { Crown } from './Crown/Crown';
+import { Bracelet } from './Bracelet/Bracelet';
 
 export const Watch = () => (
   <WatchStyled>
+    <Bracelet />
+
     <Case />
 
     <Dial />
