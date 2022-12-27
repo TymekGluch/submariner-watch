@@ -21,7 +21,7 @@ export const Bracelet: FC = () => (
                 translation={[3, 4, 5].includes(index) ? -45 : 0}
                 width={[3, 4, 5].includes(index) ? 38 : 31}
                 height={getHeightOfBraceletParts(index)}
-                shadowHeight={index === 3 ? 18 : 5}
+                shadowHeight={index === 3 ? 22 : 5}
               />
             );
           })}
