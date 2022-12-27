@@ -6,7 +6,7 @@ export const BreceletStyled = styled.div`
   transform: translate(-50%);
   left: 50%;
   width: 110px;
-  height: 400px;
+  height: 425px;
   background-color: transparent;
   border-top-left-radius: 10% 25%;
   border-top-right-radius: 10% 25%;
@@ -22,7 +22,7 @@ export const BreceletStyled = styled.div`
 export const SideOfBraceletStyled = styled.div<{ rotation: number }>`
   background-color: transparent;
   width: 100%;
-  height: 100px;
+  height: 115px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
