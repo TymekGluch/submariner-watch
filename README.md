@@ -8,8 +8,6 @@ https://submariner-watch.netlify.app/
 
 ## how to install
 
-1. First use `node -v` to find out is your node has the correct version.
-
 2. use `git clone https://github.com/TymekGluch/submariner-watch.git` to clone repository.
 
 3. use `npm install` with integred package.json terminal.
