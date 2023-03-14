@@ -17,7 +17,7 @@ export const Crown: FC = () => {
       <CrownWrapperStyled>
         <CrownStyled>
           <CrowPointWrapperStyled>
-            {Array.from({ length: 6 }).map(() => (
+            {Array.from({ length: 8 }).map(() => (
               <Fragment key={uuid()}>
                 <CrownPointStyled />
 

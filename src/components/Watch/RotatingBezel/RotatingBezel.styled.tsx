@@ -10,7 +10,7 @@ export const RotatingBezelStyled = styled.div<{ rotation: number }>`
   border-radius: 50%;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) rotate(${(props) => props.rotation}deg);
+  transform: translate(-50%, -50%);
   z-index: 1;
   display: flex;
   align-items: center;
